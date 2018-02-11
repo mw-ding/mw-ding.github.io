@@ -1,4 +1,47 @@
-baseURL = "https://mengwei.me/"
-languageCode = "en-us"
-title = "Mengwei Ding"
-theme="hyde"
+baseURL               	= "https://mengwei.me/"
+contentdir 			  	= "content"
+layoutdir           	= "layouts"
+publishdir          	= "public"
+languageCode 			= "en-us"
+title					= "Mengwei Ding"
+author					= "Mengwei Ding"
+theme					= "cocoa"
+disqusShortname			= "mengwei-me"
+pygmentsUseClassic		= true
+googleAnalytics			= "UA-113937753-1"
+
+[permalinks]
+blog  = "blog/:slug/"
+
+[[menu.main]]
+name					= "Home"
+weight					= -130
+identifier				= "home"
+url 					= "/"
+
+[[menu.main]]
+name					= "About"
+weight					= -120
+identifier				= "about"
+url 					= "/about/"
+
+[[menu.main]]
+name					= "Blog"
+weight					= -110
+identifier 				= "blog"
+url 					= "/blog/"
+
+
+[params]
+include_rss				= true
+latestpostscount		= 5
+author					= "Mengwei Ding"
+description				= "Keep Calm and Carry On"
+email					= "mengwei.ding@gmail.com"
+github					= "//github.com/mw-ding"
+twitter					= "//twitter.com/mengweid"
+linkedin				= "//www.linkedin.com/in/dingmengwei"
+
+highlightjs				= true
+
+avatar 					= "img/avatar.jpg"
