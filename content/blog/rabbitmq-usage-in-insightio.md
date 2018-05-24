@@ -7,31 +7,31 @@ draft: false
 
 For some reason which is unable to be disclosed at this moment, we recently held a long internal
 tech talk deep diving into our current service stack here at [*Insight.io*](https://insight.io). It covered pretty much everything of our system,
-ranging from backend to frontend architecture, from devops to development tools. Everybody was involved into
+ranging from backend to frontend architecture, from devops to development tools. Everybody was involved in
 the talk sharing and reviewing the work they have contributed to. It was a huge success that everybody got
 very excited and felt very fruitful after that.
 
 One idea keeps haunting me in my mind after the talk is why not document this talk into a series of posts for future
 references. Or maybe, to some degree, help others who are curious about Insight.io.
 
-A bit introduction about what we do here at *Insight.io*: **we do web based code search helping users (developers) to search and understand
+A bit introduction about what we do here at *Insight.io*: **we do web-based code search helping users (developers) to search and understand
 source code better on top of our featured code intelligence analysis engine.** Product-wise, we provide SaaS and on-premise
 versions of our software.
 
 There are a couple of aspects of the system that I want to record in this series of posts, but I don't wanna spending too much
-time on thinking about how to organize them. Instead, I prefer picking up one random topics I feel to talk the most each time. So as of today,
+time on thinking about how to organize them. Instead, I prefer picking up one random topic I feel to talk the most each time. So as of today,
 I'd like to talk about **Message Queue** in our stack.
 
 ## Background
 
 I think a very brief introduction of the overall backend architecture of Insight.io would be helpful. Our code intelligence analysis engines
-analyzes source code, a git repository to be more specific. Each git repository has to go through the following analysis stages: *Clone* -> *Build*
+analyze source code, a git repository to be more specific. Each git repository has to go through the following analysis stages: *Clone* -> *Build*
 -> *Syntax Highlighting* -> *Search Indexing*.
 
 ![Pipeline Overview](/img/pipeline-overview.png)
 
 Our stack is micro-service architectured with [*Apache Thrift*](https://thrift.apache.org) and [*Twitter Finagle*](https://twitter.github.io/finagle/).
-This analysis pipeline is accomplished by mutliple distributed components. One service for each stage.
+This analysis pipeline is accomplished by multiple distributed components. One service for each stage.
 
 For our SaaS version, all of the micro service instances are deployed on our own [*Kubenetes*](https://kubernetes.io/) cluster on AWS, while the
 on-premise version was packed by [*Docker Compose*](https://docs.docker.com/compose/).
@@ -43,7 +43,7 @@ Like most of the use cases of message queue, the problem we are trying to solve 
 The analysis pipeline coordinating communication was done by RPC in the first place because of simplicity. However, a successful RPC call requires the
 remote service (or even the dependent remote services of this remote service) to be alive in a given time period even with RPC failure retries. This
 assumption does not hold in a distributed environment, where services could be up and down for unknown reasons, particularly during the Kubenetes' rolling
-updates peroid. As a result, some stages of the analysis pipeline might not be executed eventually for a given git repository. It's such assumption of RPC
+updates period. As a result, some stages of the analysis pipeline might not be executed eventually for a given git repository. It's such assumption of RPC
 calls make the micro services tightly coupled together. Message queue aims to crack this tight-coupling issue by, in short, persisting request messages.
 
 Meanwhile, it also provides other benefits like better monitoring, debugging and traffic throttling, etc.
@@ -51,7 +51,7 @@ Meanwhile, it also provides other benefits like better monitoring, debugging and
 ## Why RabbitMQ
 
 We were choosing between [*Apache Kafka*](https://kafka.apache.org) and [*RabbitMQ*](https://www.rabbitmq.com) back then, both of which are the most
-commonly adopted message queue solutions. The major reason *RabbitMQ* stands out is its independentness, while *Kafka* relies on an additional *ZooKeeper*
+commonly adopted message queue solutions. The major reason *RabbitMQ* stands out is its independents, while *Kafka* relies on an additional *ZooKeeper*
 server. Our use case does not have an extremely high throughput and we don't have any particular rare use case other than message publish/subscribe,
 so they don't make any difference in terms of this concern.
 
