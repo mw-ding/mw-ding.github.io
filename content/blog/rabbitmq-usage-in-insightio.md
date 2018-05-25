@@ -50,10 +50,15 @@ Meanwhile, it also provides other benefits like better monitoring, debugging and
 
 ## Why RabbitMQ
 
-We were choosing between [*Apache Kafka*](https://kafka.apache.org) and [*RabbitMQ*](https://www.rabbitmq.com) back then, both of which are the most
+We were mostly choosing between [*Apache Kafka*](https://kafka.apache.org) and [*RabbitMQ*](https://www.rabbitmq.com) back then, both of which are the most
 commonly adopted message queue solutions. The major reason *RabbitMQ* stands out is its independents, while *Kafka* relies on an additional *ZooKeeper*
 server. Our use case does not have an extremely high throughput and we don't have any particular rare use case other than message publish/subscribe,
 so they don't make any difference in terms of this concern.
+
+Personally, I also thought about a light-weighted solution of using [*Redis* PUB/SUB](https://redis.io/topics/pubsub) or
+[*Redisson*](https://redisson.org) for the sake of system simplicity without even bringing an additional message queue component,
+because we have already adopted *Redis* for caching and *Redisson* for distributed locking our stack. However, since they are not
+dedicated message queue solutions, they don't provide a fullset of message queue features as RabbitMQ does.
 
 ## Message Queue Implementation
 
@@ -183,4 +188,4 @@ is going to be an issue while releasing new versions of stacks.
 One way to solve this issue is to hash the properties map into string and make the hash value a part
 of the message queue names. Whenever there is a change of properties, the stack will create new message
 queues instead of reusing existing ones. And to make things cleaner, we also garbage collect the old
-message queues.
+message queues automatically.

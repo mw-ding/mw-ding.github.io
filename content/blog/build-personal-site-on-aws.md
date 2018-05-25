@@ -14,11 +14,11 @@ site with the following features:
 
 You might suggest [GitHub Pages + Jekyll](https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/).
 But I am not quite fond of hosting it on Github (for no reason) and would
-prefer AWS, since I am experienced with AWS environment due to my daily
+prefer AWS since I am experienced with AWS environment due to my daily
 engineering work.
 
 I did some quick search and successfully assembled a pipeline to achieve this.
-So I just wrapped up this post a summarization. Hopefully this is helpful for 
+So I just wrapped up this post a summarization. Hopefully, this is helpful for 
 you as well.
 
 The following tools will be covered in this post:
@@ -33,7 +33,7 @@ this list align. :))
 # Initialize a Hugo Git Repository
 
 Follow [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/) to
-install and setup a new Hugo site folder.
+install and set up a new Hugo site folder.
 
 {{<highlight shell>}}
 $ brew install hugo
@@ -57,7 +57,7 @@ Go to your AWS web console and create a S3 bucket. Configurate the bucket
 a bit as follows:
 
 * Enable the **Static website hosting** in the **Properties** tab of the bucket
-and specify an index page, as most website does.
+and specify an index page, as most websites do.
 
 ![image](/img/s3-properties-static-hosting.png)
 
@@ -92,7 +92,7 @@ just created.
 
 ![image](/img/cloudfront-create-distribution.png)
 
-* Use a custom SSL certificate for the domain your are going to bind.
+* Use a custom SSL certificate for the domain you are going to bind.
 
 ![image](/img/cloudfront-custom-ssl-certificate.png)
 
@@ -115,9 +115,9 @@ via https in a minute.
 Till now, you can serve your site on AWS S3 fairly well, except that whenever you
 make any changes with git, you have to additionally build and sync files manually.
 
-These additional chore work can be easily delegated to continute integration tool,
+These additional chore work can be easily delegated to continue integration tool,
 like Circle CI used in here. I choose Circle CI mostly because it's free and
-perosnal familiarity with it.
+personal familiarity with it.
 
 * Setup AWS integration with Circle CI following [this simple tutorial](https://circleci.com/docs/1.0/continuous-deployment-with-amazon-s3/)
 
@@ -144,13 +144,13 @@ jobs:
 
 {{</highlight>}}
 
-The file is very straightfowward that it checkout a docker image `rabidgremlin/hugo-s3`
+The file is very straightforward that it checks out a docker image `rabidgremlin/hugo-s3`
 with Hugo and AWS CLI installed, checkout hugo theme, build the site and then
 sync the generated files with S3 bucket.
 
 * As the final step, import the GitHub repository into Circle CI. Now whenever
 you made a new push to the repository, it will trigger a new build in Circle CI.
-As long as the build finished successfully, your site get updated.
+As long as the build finished successfully, your site gets updated.
 
-Now with all these setup, publishing your posts is just as easy as commiting your
+Now with all these setups, publishing your posts is just as easy as committing your
 code.
