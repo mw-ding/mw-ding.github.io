@@ -101,4 +101,4 @@ commonly adopted user management system like *LDAP*, *SAML* and *Kerberos*.
 ## More
 
 Again, this is a very high-level walkthrough of the serving and pipeline system. Another 2 topics regarding the system are
-*logging & monitoring* and *DevOps*. I think it's worth to have a separate post talking about them.
+*logging & monitoring* and *DevOps*. I think it's worth to have a separate post talking about them and please continue to read [Insight.io Tech Stack (3) - Infrastructure and DevOps]({{< ref "insightio-devops-infra.md">}}).
