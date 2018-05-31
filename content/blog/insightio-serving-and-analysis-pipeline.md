@@ -6,7 +6,7 @@ draft: false
 
 This next topic I want to cover is the entire backend system including both the serving and source code
 repository analysis pipeline. Some background context and motivations of this series of posts have already
-been covered in the previous post [INSIGHT.IO TECH STACK (1) - RABBITMQ PRACTICES IN INSIGHT.IO]({{< ref "rabbitmq-usage-in-insightio.md" >}}). In short, this stemmed from a recent internal engineering deep dive talk, which I thought might be worthwhile
+been covered in the previous post [INSIGHT.IO TECH STACK (1) - RABBITMQ PRACTICES IN INSIGHT.IO]({{< ref "insightio-rabbitmq-usage.md" >}}). In short, this stemmed from a recent internal engineering deep dive talk, which I thought might be worthwhile
 to summarize for future reference.
 
 ## Framework and Storage Systems
