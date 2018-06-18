@@ -150,5 +150,6 @@ This post and the last one [Insight.io Tech Stack (2) - Serving and Analysis Pip
 serving to the infrastructure of the entire backend stack. There is still one big
 piece of the stack missing, which is the applications and frontend architecture.
 Javascript ecosystem dominates this area, which is a completely different world with
-the backend stack. This is covered in a separate post later all the way from
-the frontend architecture to logging and monitoring, from infrastructure to DevOps.
+the backend stack. This is covered in [Insight.io Tech Stack (4) - All About Frontend]
+({{< ref "insightio-frontend-architecture.md">}})  all the way from
+the frontend architecture to logging and monitoring, from infrastructure to dev tools.
