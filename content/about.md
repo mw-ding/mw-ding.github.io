@@ -4,7 +4,10 @@ date: 2018-02-10T16:10:19-08:00
 draft: false
 ---
 
-I am now Co-Founder of [*Insight.io*](https://insight.io). Incubated a side project into this startup, aiming
+
+I am now *Tech Lead / Principal Software Engineer II* at [*Elastic*](https://elastic.co), the compnay behind *Elasticsearch*. Joined force with *Elastic* after the acqusition on 07/2018 ([Blog post](https://www.elastic.co/blog/welcome-insight-io-to-the-elastic-team)). Focusing on reinventing code search on top of *Elasticsearch*.
+
+I was a Co-Founder of [*Insight.io*](https://insight.io). Incubated a side project into this startup, aiming
 to crack any efficiency issues of software development process by our code intelligence technology.
 
 I joined *Google* [*Product Ads*](https://www.google.com/retail/solutions/) Team as a software engineer
@@ -25,4 +28,4 @@ Before that, in China, I acquired *M.S.* degree from *Shanghai Jiao Tong Univers
 In my spare time, [books and movies](https://www.douban.com/people/lennard/)
 are my best friends. I taught myself swimming very young and loved it since then.
 
-(*Last updated: 2018/03/16*)
+(*Last updated: 2018/08/16*)
