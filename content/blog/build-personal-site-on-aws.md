@@ -2,7 +2,7 @@
 title: "Build A Personal Site on AWS Like This One in 15 Minutes"
 tags: ["aws", "s3", "blogging", "git", "markdown"]
 date: 2017-11-05T23:07:17-08:00
-draft: false
+draft: true
 ---
 
 I was looking for a simple solution recently to host a lightweight personal
