@@ -1,0 +1,22 @@
+name: Build and Deploy Site
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Checkout Theme
+      run: git submodule update --init --recursive
+    - name: Build with Hugo
+      uses: ./.github/actions/hugo
+    - name: Deploy to S3
+      # TODO: change to the aws cli action
+      uses: ./.github/actions/aws
+      env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
