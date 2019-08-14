@@ -8,9 +8,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: rabidgremlin/hugo-s3
     steps:
     - uses: actions/checkout@master
     - name: Checkout Theme
       run: git submodule update --init --recursive
-    - name: Build with Hugo
-      uses: ./.github/actions/hugo
+    - name: Build with hugo
+      run: hugo
+    - name: Inspect build output
+      run: ls -al ./public
