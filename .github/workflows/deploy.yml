@@ -14,14 +14,10 @@ jobs:
     - uses: actions/checkout@master
     - name: Checkout Theme
       run: git submodule update --init --recursive
-    - name: Build with Hugo
-      uses: ./.github/actions/hugo
-  deploy:
-    runs-on: ubuntu-latest
-    container:
-      image: rabidgremlin/hugo-s3
-    needs: build
-    steps:
+    - name: Build with hugo
+      run: hugo
+    - name: Inspect build output
+      run: ls -al ./public
     - name: Deploy to S3
       run: aws s3 sync public s3://mengwei.me --region=us-west-1 --delete
       env:
