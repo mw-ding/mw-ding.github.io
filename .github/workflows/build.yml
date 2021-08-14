@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: rabidgremlin/hugo-s3
+      image: mwding/hugo-s3:latest
     steps:
     - uses: actions/checkout@master
     - name: Checkout Theme
