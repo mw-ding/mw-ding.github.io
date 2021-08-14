@@ -5,7 +5,7 @@ draft: false
 ---
 
 Hi! This is Mengwei Ding. I am now an Eng lead at Facebook. Currently, I am a part of the mission
-building Creators ecosystem on Facebook App, reclaiming Facebook's territory from our competitors, starting from H2'21.
+building Creators ecosystem on Facebook App, reclaiming Facebook's territory for Creators from our competitors, starting from H2'21.
 Before that, I led a team build audience workstreams of [*Live Audio Room*](https://about.fb.com/news/2021/06/live-audio-rooms-and-podcasts-on-facebook/) product, and its distribution and discovery channels from scratch, catching the tide in live audio space.
 
 Prior to Facebook, I was a *Principal Software Engineer II* at [*Elastic*](https://elastic.co), the company
