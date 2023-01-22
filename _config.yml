@@ -72,7 +72,8 @@ defaults:
       related: true
       show_date: true
   
-include: ["_pages"]
+include:
+  - _pages
 
 defaults:
   # _pages

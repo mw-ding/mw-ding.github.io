@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2018-02-10T16:10:19-08:00
-draft: false
+permalink: /about/
 ---
 
 Hi! This is Mengwei Ding. I am now an Eng lead at Facebook. Currently, I am a part of the mission
