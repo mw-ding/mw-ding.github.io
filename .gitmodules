@@ -1,6 +1,0 @@
-[submodule "themes/hyde"]
-	path = themes/hyde
-	url = https://github.com/spf13/hyde.git
-[submodule "themes/cocoa"]
-	path = themes/cocoa
-	url = https://github.com/nishanths/cocoa-hugo-theme.git
