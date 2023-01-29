@@ -1,7 +1,5 @@
 ---
 title: "Insight.io Tech Stack (2) - Serving and Analysis Pipeline"
-date: 2018-05-25T13:42:06-07:00
-draft: false
 ---
 
 This next topic I want to cover is the entire backend system including both the serving and source code

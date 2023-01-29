@@ -1,7 +1,5 @@
 ---
 title: "Insight.io Tech Stack (4) - All About Frontend"
-date: 2018-06-15T23:56:17-07:00
-draft: false
 ---
 
 All the previous posts of this Insight.io Tech Stack Series ([1. Message Queue]({{< ref "insightio-rabbitmq-usage.md">}}),
