@@ -1,7 +1,6 @@
 ---
+layout: post
 title: "Insight.io Tech Stack (1) - RabbitMQ Practices in Insight.io"
-date: 2018-05-22T14:55:36-07:00
-draft: false
 ---
 
 
