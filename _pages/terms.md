@@ -3,6 +3,10 @@ title: "Terms of Service"
 permalink: /terms
 ---
 
+> Looking for the **MD Hermes Bot** terms of service? See
+> [/md-hermes-bot/terms](/md-hermes-bot/terms). This page covers the Kai Email
+> Forward Router automation.
+
 # Terms of Service for Kai Email Forward Router
 
 Effective date: August 24, 2026

@@ -3,6 +3,10 @@ title: "Privacy Policy"
 permalink: /privacy
 ---
 
+> Looking for the **MD Hermes Bot** privacy policy? See
+> [/md-hermes-bot/privacy](/md-hermes-bot/privacy). This page covers the Kai
+> Email Forward Router automation.
+
 # Privacy Policy for Kai Email Forward Router
 
 Effective date: August 24, 2026
