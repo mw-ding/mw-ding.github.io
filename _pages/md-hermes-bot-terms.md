@@ -38,3 +38,5 @@ any time from Google's permissions page:
 ## Contact
 
 For questions about these terms, contact: mengwei.assistant@gmail.com
+
+Plain-text contact for reviewers: `mengwei.assistant@gmail.com`

@@ -15,6 +15,8 @@ a public SaaS product and is not offered for third-party use.
 
 For privacy questions, contact: mengwei.assistant@gmail.com
 
+Plain-text contact for reviewers: `mengwei.assistant@gmail.com`
+
 ## Gmail and Google account data access
 
 MD Hermes Bot requests access to the account owner's Gmail data only as needed
