@@ -19,3 +19,5 @@ any third party.
 - [MD Hermes Bot Terms of Service](/md-hermes-bot/terms)
 
 Contact: [mengwei.assistant@gmail.com](mailto:mengwei.assistant@gmail.com)
+
+Plain-text contact for reviewers: `mengwei.assistant@gmail.com`
